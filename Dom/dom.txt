@@ -1,0 +1,3 @@
+Dom is a document object module & programming interface for html
+that defines html objects,properties,method and events to get, change,
+add or delete html elements

@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dom Navigation</title>
+</head>
+<body>
+
+    <!-- Dom Navigation -->
+    <p id="title">Let's Learn Html dom node</p>
+
+    <!-- JavaScript HTML DOM Elements (Nodes) 
+
+    HTMLCollection items can be accessed by their name, id, or index number.
+    NodeList items can only be accessed by their index number.
+    -->
+
+    <div id="div1">
+        <p id="p1">This is a paragraph.</p>
+        <p id="p2">This is another paragraph.</p>
+    </div>
+
+    <script>
+
+        const para = document.createElement("p");
+        const node = document.createTextNode("I am new");
+        para.appendChild(node);
+
+        const div = document.getElementById("div1");
+        const p2 = document.getElementById("p2")
+        // div.insertBefore(para, p2);
+        // p1.remove();
+        // div.removeChild(p2);
+
+        // p2.parentNode.removeChild(p2);
+        div.replaceChild(para, p2);
+
+    </script>
+    
+    <!-- <script src="dom-navigation.js"></script> -->
+</body>
+</html>
