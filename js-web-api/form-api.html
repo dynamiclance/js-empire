@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+<body>
+
+<h2>JavaScript Validation</h2>
+
+<p>Enter a number and click OK:</p>
+
+<input id="id1" type="number" min="100" max="300" required>
+<button onclick="myFunction()">OK</button>
+
+
+<p id="demo"></p>
+
+<script>
+function myFunction() {
+
+  const inpObj = document.getElementById("id1");
+
+  if (inpObj.validity.rangeOverflow) {
+    inpObj.setCustomValidity("You have made a Range over flow error");
+  } else if(inpObj.validity.rangeUnderflow) {
+    inpObj.setCustomValidity("You have made a Range under flow error");
+  } else if(inpObj.validity.valueMissing){
+    inpObj.setCustomValidity("Input value missing");
+  }
+
+  if (!inpObj.checkValidity()) {
+    document.getElementById("demo").innerHTML = inpObj.validationMessage;
+  }
+} 
+</script>
+
+</body>
+</html>
